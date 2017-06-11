@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calories</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="view.css" media="all">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div id="form_container" class = "flexbox-container">
+        <div>
+            <h1>Daily Caloric Intake</h1>
+            <form id="" class=""  method="" action="">
+            <div class="form_description">
+                <h2>Daily Caloric Intake</h2>
+                <p>Fill out the form to figure out how long it will take you to get to your goal weight!</p>
+            </div>                      
+            <ul>
+                <li id="li_6" >
+                    <label class="description" for="sex"> Sex </label>
+                        <span>
+                            <select name="sex" id="sex">
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </span>
+                    <p class="guidelines" id="guide_6"><small>Choose your sex</small></p> 
+                </li>
+                <li id="li_1" >
+                    <label class="description" for="age">Age in Years </label>
+                    <div>
+                        <input id="age" name="age" class="element text small" type="number" min="1" max="120"/> 
+                    </div>
+                    <p class="guidelines" id="guide_1"><small>Enter your age in years</small></p> 
+                </li>
+                <li id="li_2" >
+                    <label class="description" for="height-feet">Height in Feet </label>
+                    <div>
+                        <input id="height-feet" name="height-feet" class="element text small" type="number" min="0" max="8"/> 
+                    </div>
+                    <p class="guidelines" id="guide_2"><small>Enter your height in feet</small></p> 
+                </li>
+                <li id="li_3" >
+                    <label class="description" for="height-inches">Height in Inches </label>
+                    <div>
+                        <input id="height-inches" name="height-inches" class="element text small" type="number" min="0" max="11"/> 
+                    </div>
+                    <p class="guidelines" id="guide_3"><small>Enter your height in inches</small></p> 
+                    </li>
+                    <li id="li_4" >
+                        <label class="description" for="weight-pounds">Weight in Pounds </label>
+                        <div>
+                            <input id="weight-pounds" name="weight-pounds" class="element text small" type="number" min="0" max="600"/> 
+                        </div>
+                        <p class="guidelines" id="guide_4"><small>Enter your weight in pounds</small></p> 
+                    </li>
+                    <li id="li_5" >
+                        <label class="description" for="goal-weight-pounds">Goal Weight in Pounds </label>
+                        <div>
+                            <input id="goal-weight-pounds" name="goal-weight-pounds" class="element text small" type="number" min="0" max="600"/> 
+                        </div>
+                        <p class="guidelines" id="guide_5"><small>Enter your goal weight in pounds</small></p> 
+                    </li>
+                    <li id="li_7" >
+                        <label class="description" for="active-level">Activity Level </label>
+                        <span>
+                            <select name="active-level" id="active-level">
+                                <option value="1.2" selected>Sedentary</option>
+                                <option value="1.375">Light</option>
+                                <option value="1.55">Moderate</option>
+                                <option value="1.725">Very Active</option>
+                                <option value="1.9">Extra Active</option>
+                            </select>
+                        </span>
+                        <p class="guidelines" id="guide_7"><small>Select your activity level</small></p> 
+                    </li>
+                    <li class="buttons">
+                        <button id="submit" class="button_text" type="button" name="submit" value="Submit" onclick="showit();">Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div>
+            <h1>RESULTS!!</h1>
+            <div class="form_description">
+                <h2>Results</h2>
+                <p>Look at your results, duh!</p>
+                <ul>
+                    <li id="bmr-result">Basal Metabolic Rate (BMR):</li>
+                    <li id="amr-result">Active Metabolic Rate (AMR):</li>
+                    <li id="bmr-goal-result">Goal BMR:</li>
+                    <li id="amr-goal-result">Goal AMR:</li>
+                    <li id="total-days">Total Days:</li>
+                </ul>
+            </div>
+            <div>
+                <table class="pure-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Weight</th>
+                            <th>BMR</th>
+                            <th>AMR</th>
+                            <th>Goal BMR</th>
+                            <th>Goal AMR</th>
+                            <th>Calorie Deficit</th>
+                            <th>Expected Loss</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
