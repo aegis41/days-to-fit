@@ -42,6 +42,7 @@ function showit() {
         let goalAmrCell = newRow.insertCell(5);
         let calorieCell = newRow.insertCell(6);
         let expectedCell = newRow.insertCell(7);
+        let even = i % 2 === 0;
         dayCell.innerHTML = results[i].day;
         weightCell.innerHTML = results[i].weight.toFixed(2);
         bmrCell.innerHTML = results[i].bmr;
